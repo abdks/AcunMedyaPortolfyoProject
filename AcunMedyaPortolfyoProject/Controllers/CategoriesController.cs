@@ -37,22 +37,22 @@ namespace AcunMedyaPortolfyoProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        
-       // [HttpGet]
-       // public ActionResult UpdateCategoryy(int id)
-       // {
-       //     var values = db.Tbl_Category.Find(id);
-       //     return View(values);
-       // }
-       //[HttpPost]
-       //public ActionResult UpdateCategoryy(Tbl_Category model)
-       // {
-       //     var value = db.Tbl_Category.Find(model.CategoryID);
-       //     value.CategoryName =  model.CategoryName;
-       //     db.SaveChanges();  //ctrl s veri tabanında
-       //     return RedirectToAction("Index");
-       //  }
 
-        
+        [HttpGet]
+        public ActionResult UpdateCategoryy(int id)
+        {
+            var values = db.Tbl_Category.Find(id);
+            return View(values);
+        }
+        [HttpPost]
+        public ActionResult UpdateCategoryy(Tbl_Category model)
+        {
+            var value = db.Tbl_Category.Find(model.CategoryID);
+            value.CategoryName = model.CategoryName;
+            db.SaveChanges();  //ctrl s veri tabanında
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
