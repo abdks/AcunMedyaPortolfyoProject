@@ -1,0 +1,57 @@
+﻿@model List<AcunMedyaPortolfyoProject.Models.Tbl_Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+
+
+<h2>Burası Proje Sayfası</h2>
+
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Proje Sayısı</th>
+                <th>ProjeID</th>
+                <th>Proje İsimi</th>
+                <th>Açıklama</th>
+                <th>URL</th>
+                <th>Resim1</th>
+                <th>Resim2</th>
+                <th>Resim3</th>
+                <th>Kategori</th>
+                <th>Güncelle</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.ProjectID</td>
+                    <td>@item.ProjectName</td>
+                    <td>@item.Description</td>
+                    <td>@item.ProjectLink</td>
+                    <td><img src="@item.Image1" style="width:40px;height:40px"/></td>
+                    <td><img src="@item.Image2" style="width:40px;height:40px"/></td>
+                    <td><img src="@item.Image3" style="width:40px;height:40px"/></td>
+                    <td>@item.Tbl_Category.CategoryName</td>
+                    <td><a href="/Categories/UpdateCategoryy/@item.CategoryID" class="btn btn-danger">Güncelle</a></td>
+                    <td><a href="/Categories/DeleteCategory/@item.CategoryID" class="btn btn-dark">Sil</a></td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>
+    <a href="/Categories/CreateCategory/" class="btn btn-danger">Oluştur</a>
+
+</div>
+

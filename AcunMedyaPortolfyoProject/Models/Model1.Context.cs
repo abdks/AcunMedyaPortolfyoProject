@@ -36,5 +36,6 @@ namespace AcunMedyaPortolfyoProject.Models
         public virtual DbSet<Tbl_Skill> Tbl_Skill { get; set; }
         public virtual DbSet<Tbl_Slider> Tbl_Slider { get; set; }
         public virtual DbSet<Tbl_Testimonial> Tbl_Testimonial { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

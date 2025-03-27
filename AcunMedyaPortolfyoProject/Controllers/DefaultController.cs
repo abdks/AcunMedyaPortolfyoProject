@@ -45,6 +45,10 @@ namespace AcunMedyaPortolfyoProject.Controllers
             return RedirectToAction("Index");
         }
 
-
+        public PartialViewResult PartialProject()
+        {
+            var values = db.Tbl_Project.ToList();
+            return PartialView(values);
+        }
     }
 }

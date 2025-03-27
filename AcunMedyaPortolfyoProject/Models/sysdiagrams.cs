@@ -12,17 +12,12 @@ namespace AcunMedyaPortolfyoProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_Project
+    public partial class sysdiagrams
     {
-        public int ProjectID { get; set; }
-        public string ProjectName { get; set; }
-        public string Description { get; set; }
-        public string ProjectLink { get; set; }
-        public string Image1 { get; set; }
-        public string Image2 { get; set; }
-        public string Image3 { get; set; }
-        public Nullable<int> CategoryID { get; set; }
-    
-        public virtual Tbl_Category Tbl_Category { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

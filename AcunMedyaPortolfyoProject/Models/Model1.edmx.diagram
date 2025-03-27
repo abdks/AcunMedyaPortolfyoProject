@@ -16,6 +16,8 @@
         <EntityTypeShape EntityType="DbAcunMedyaProject1Model.Tbl_Skill" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbAcunMedyaProject1Model.Tbl_Slider" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbAcunMedyaProject1Model.Tbl_Testimonial" Width="1.5" PointX="6.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbAcunMedyaProject1Model.sysdiagrams" Width="1.5" PointX="9.375" PointY="0.75" />
+        <AssociationConnector Association="DbAcunMedyaProject1Model.FK_Tbl_Project_Tbl_Category" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
